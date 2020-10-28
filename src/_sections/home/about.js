@@ -5,6 +5,7 @@ import { Row, Col, Container, Hidden } from 'react-grid-system';
 import { Button } from '../../_components/buttons';
 import { ServiceCarousel, ReviewCarousel } from '../../_components/carousels';
 import { ArrowRightOutlined } from '@ant-design/icons';
+import { navigate } from 'gatsby';
 
 const MainCont = styled.section`  
   position: relative;
@@ -113,7 +114,7 @@ export default ()=> {
                 <Description>
                   {state.about.banner.subTitle}
                 </Description>
-                <Button primary rounded>
+                <Button primary rounded onClick={()=> navigate("/about")}>
                   {state.about.banner.buttonText}
                   <ArrowRightOutlined style={{ marginLeft: 8 }} />
                 </Button>

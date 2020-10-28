@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'react-grid-system';
 import Context from '../../_context';
 import { Button } from '../../_components/buttons';
 import { ArrowRightOutlined } from '@ant-design/icons';
+import { navigate } from 'gatsby';
 
 const SectionCont = styled.div`
   margin-top: ${props => props.noMargin ? 0 : "4rem"};
@@ -44,8 +45,8 @@ export default ({ noMargin })=> {
               </Col>
               <Col xs={12} md={3}>
                 <ButtonCont>
-                  <Button primary block>
-                    Contactanos
+                  <Button primary block onClick={()=> navigate("/contact")}>
+                    Contáctanos
                     <ArrowRightOutlined style={{ marginLeft: 8 }} />
                   </Button>
                 </ButtonCont>

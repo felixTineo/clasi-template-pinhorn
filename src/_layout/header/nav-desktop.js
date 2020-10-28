@@ -71,13 +71,13 @@ export default ({ dark })=> {
             </NavLink>
           </Link>
         </NavItem>
-        <NavItem>
+{/*        <NavItem>
           <Link to="/news">
             <NavLink dark={dark}>
               Noticias
             </NavLink>
           </Link>
-        </NavItem>
+</NavItem>*/}
         <NavItem>
           <Link to="/contact">
             <NavLink dark={dark}>
