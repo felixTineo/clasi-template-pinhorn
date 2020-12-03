@@ -7,7 +7,7 @@ import RateBar from '../../_layout/header/rate-bar';
 import { DownOutlined, UpOutlined } from '@ant-design/icons';
 
 const VeryMainCont = styled.section`
-  background-image: url(${props => props.theme.home.hero.background});
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),url(${props => props.theme.home.hero.background});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

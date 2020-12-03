@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import Context from '../../_context'
 import styled from 'styled-components';
 import { Container, Row, Col } from 'react-grid-system';
 import { Input, Textarea } from '../../_components/inputs';
 import { Button } from '../../_components/buttons';
+import Map from '../../_components/map';
 
 const MainCont = styled.div`
   min-height: 80vh;
@@ -64,12 +66,9 @@ const ButtonContainer = styled.div`
     justify-content: flex-end;
   }   
 `
-const Map = styled.img`
-  width: 100%;
-`
 
 export default ()=> {
-
+  const { lat, lng } = useContext(Context).office;
   return(
       <MainCont>
             <Container>
@@ -100,9 +99,6 @@ export default ()=> {
                         shadow
                       />                                    
                     </Col>                
-                    <Col xs={12}>
-                      <ImgCaptcha src="/captcha.png" alt="no soy un robot" />
-                    </Col>       
                     <Col xs={12}>
                       <SubTitleFooter>
                         También puede escribirnos a <MailSpan>ventas@leasy.cl</MailSpan>
@@ -142,7 +138,16 @@ export default ()=> {
             </Form >        
           </Col>
           <Col xs={12} md={12}>
-            <Map src="/map.png" />
+          {
+            lat && (
+              <Map
+              lat={parseFloat(lat)}
+              lng={parseFloat(lng)}
+              height={300}
+              zoom={3}
+            />         
+            )
+          } 
           </Col>
         </Row>
         </Container>

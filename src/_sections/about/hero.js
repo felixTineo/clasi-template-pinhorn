@@ -10,7 +10,7 @@ const MainCont = styled.section`
 `
 const TitleCont = styled.div`
   position: relative;
-  height: 60vh;
+  height: 80vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;

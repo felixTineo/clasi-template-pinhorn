@@ -26,8 +26,6 @@ const Avatar = styled.img`
   min-width: 48px;
   height: 60px;
   width: 60px;
-  flex-grow: 1;
-  flex-shrink: 0;
   border-radius: 50%;
   @media(min-width: 768px){
     min-height: 76px;
@@ -54,13 +52,12 @@ const ContactFormButtons = styled.div`
   margin-top: 2rem;
 `
 
-export default ()=> {
-  const description = useContext(Context).singleProperty;
-  const user = description.relatedUser;
+export default ({ description })=> {
+  const user = { ...description._comercialUser[0], ...description._comercialUser_person[0] };
 
   return(
     <MainCont>
-      <h2>{user.jobTitle}</h2>
+      <h2>{user.position}</h2>
       <UserCont>
         <Avatar src={user.avatar} alt={user.lastName} />
         <UserInfoCont>
@@ -68,7 +65,7 @@ export default ()=> {
             {user.firstName} ${user.lastName}
           </UserInfoItem>
           <UserInfoItem>
-            {user.phone}
+            {user.phone && user.phone.countryCode + " " + user.phone.areaCode + " " + user.phone.phoneNumber}
           </UserInfoItem>
           <UserInfoItem>
             {user.email}

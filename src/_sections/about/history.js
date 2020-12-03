@@ -6,14 +6,21 @@ import { Container, Row, Col } from 'react-grid-system';
 const MainCont = styled.section`
   padding: 6rem 0;
   //min-height: 100vh;
+  @media(min-width: 576px){
+    padding: 6rem 0;
+  }
 `
 const HistoryCont = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  height: 70vh;
+  //height: 70vh;
   margin: 1rem 0;
+  @media(min-width: 576px){
+    padding: 6rem 0;
+    justify-content: center;
+  }
 `
 const Title = styled.h2`
   //color: ${props => props.theme.main.primaryColor};
@@ -33,8 +40,13 @@ const ImageContainer = styled.div`
 `
 const Image = styled.img`
   width: 100%;
-  position: absolute;
-  bottom: -5px;
+  //position: relative;
+  //bottom: -5px;
+  top: 0;
+  @media(min-width: 768px){
+    height: 100%;
+    margin-top: 0;
+  }
 `
 
 

@@ -1,9 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import { v1 as uuid } from 'uuid';
+import { capitalize } from '../../_util';
 
 const DefaultOption = styled.option`
   color: #212121;
   font-family: 'Rubik', sans-serif;
+`
+const AllOption = styled(DefaultOption)`
+  font-weight: bold;
 `
 const Option = styled.option`
   color: #212121;
@@ -51,7 +56,10 @@ export default (props)=> {
       >
         <DefaultOption value="" disabled selected hidden>{props.default}</DefaultOption>
         {
-          props.options.map((o, index) => <Option key={index}>{o}</Option>)
+          props.noAll ? null : <AllOption value="">Todo</AllOption>
+        }
+        {
+          props.options.map((o, index) => <Option value={o} key={uuid()}>{props.capitalize ? capitalize(o): o}</Option>)
         }       
       </Select>    
   )

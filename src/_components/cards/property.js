@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import context from '../../_context';
 import Link from '../link';
 import styled from 'styled-components';
+import { truncate, FormatCurrency } from '../../_util';
 
 const CardCont = styled.div`
   background-color: #fff;
@@ -27,7 +29,7 @@ const CardCont = styled.div`
   }
 `
 const CardImage = styled.div`
-  background-image: url(${props => props.src});
+  background-image: url("${props => props.src}");
   background-position: center;
   background-size: cover;
   background-repeat: none;
@@ -83,25 +85,28 @@ export default ({
   mainImage,
   title,
   value,
+  currency,
   code,
   ubication,
   characteristics,
+  _id,
 })=> {
+  const builderId = useContext(context).builderId;
   return(
-    <Link to="/property" title="Ver propiedad">
+    <Link to={`/property?builderId=${builderId}&propertyId=${_id}`} title="Ver propiedad">
     <CardCont>
       <CardImage src={mainImage} />
       <CardInfo>
         <CardTitleCont>
-          <CardTitle>{title}</CardTitle>
-          <CardPrice>UF ${value}</CardPrice>
+          <CardTitle>{truncate(title, 30)}</CardTitle>
+          <CardPrice>{`${currency} ${FormatCurrency(currency, value)}`}</CardPrice>
           <li style={{ margin: "1rem 0" }}>
             <CardOperation>Venta - </CardOperation>
             <span>cod {code}</span>
           </li>
         </CardTitleCont>
         <CardCharacteristics>
-          <CharItem>{ubication.address}</CharItem>
+          <CharItem>{truncate(ubication.address, 30)}</CharItem>
           {
             characteristics.slice(0, 2).map((char, index) => (
               <CharItem key={index}>
