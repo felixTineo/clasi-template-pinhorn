@@ -168,7 +168,7 @@ export default ({ description })=> {
         }
         <UserInfoCont>
           <UserInfoItem>
-            {user.firstName} ${user.lastName}
+            {user.firstName} {user.lastName}
           </UserInfoItem>
           <UserInfoItem>
             {user.phone && user.phone.countryCode + " " + user.phone.areaCode + " " + user.phone.phoneNumber}

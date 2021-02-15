@@ -6,7 +6,7 @@ import { Container } from 'react-grid-system';
 import RateBar from '../../_layout/header/rate-bar';
 
 const VeryMainCont = styled.section`
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(${props => props.theme.home.hero.background});
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(${props => props.theme.home.hero.background});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -70,9 +70,6 @@ export default ()=> {
           <Title>
             {state.home.hero.title}
           </Title>
-          <RateCont>
-            <RateBar />
-          </RateCont>
         </TitleCont>
         <DownButton>
           <FormProperty shadow />

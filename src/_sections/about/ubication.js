@@ -31,7 +31,7 @@ export default ({ noContact })=> {
       <Row nogutter>
         <Col xs={12} md={6} >
           <Title>
-            {state.title}
+            Encuéntranos en Av. Presidente Riesco N° 5037 – Las Condes
           </Title>
         </Col>
         <Col xs={12} md={6}>

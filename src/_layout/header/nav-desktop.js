@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { Fragment, useContext } from 'react';
 import Context from '../../_context';
 import styled from 'styled-components';
 import Logo from './logo';
@@ -7,7 +7,7 @@ import { Button } from '../../_components/buttons';
 import RateBar from './rate-bar';
 
 const MainCont = styled.nav`
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,18 +81,20 @@ export default ({ dark })=> {
   const state = useContext(Context);
   const builderId = useContext(Context).builderId;
   return(
+    <Fragment>
+      <RateBar />
     <MainCont>
-      <Logo />
+      <Logo dark={dark} />
       <NavBar>
         <NavItem noMargin>
-          <Link to={`/about?builderId=${builderId}`}>
+          <Link to={`/about`}>
             <NavLink dark={dark}>
               Nosotros
             </NavLink>
           </Link>
         </NavItem>
         <NavItem>
-          <Link to={`/properties?builderId=${builderId}`}>
+          <Link to={`/properties`}>
             <NavLink dark={dark}>
               Propiedades
             </NavLink>
@@ -106,7 +108,7 @@ export default ({ dark })=> {
           </Link>
 </NavItem>*/}
         <NavItem>
-          <Link to={`/contact?builderId=${builderId}`}>
+          <Link to={`/contact`}>
             <NavLink dark={dark}>
               Contacto
             </NavLink>
@@ -120,5 +122,6 @@ export default ({ dark })=> {
         Login
       </LoginButton>
   </MainCont>
+  </Fragment>
   )
 }

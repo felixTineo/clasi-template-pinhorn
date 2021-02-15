@@ -126,7 +126,7 @@ export default ()=> {
         <ServiceCont>
           <Row>
             <Col xs={12}>
-              <TitleService>Ofrecemos un servicio ajustado a las necesidades de cada cliente</TitleService>
+              <TitleService>Conozca los servicios de LAV Propiedades</TitleService>
             </Col>
             <Col xs={12}>
               <CarouselCont>

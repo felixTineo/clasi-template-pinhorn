@@ -3,7 +3,7 @@ import OfficeContext from '../../_context';
 import { ReviewCarousel } from '../../_components/carousels'
 import styled from 'styled-components';
 import { Container, Col, Row } from 'react-grid-system';
-import Contact from '../home/contact';
+import Contact from '../about/contact';
 
 const MainSection = styled.section`
   position: relative;

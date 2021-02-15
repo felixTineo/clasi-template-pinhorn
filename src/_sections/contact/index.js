@@ -15,6 +15,9 @@ const MainCont = styled.div`
   align-items: flex-start;
   margin-top: 4rem;
   background-color: ${props => props.theme.main.primaryColor};
+  @media(min-width: 768px){
+    margin-top: 140.86px;
+  }  
 `
 
 const Title = styled.h1`
@@ -129,7 +132,7 @@ export default ()=> {
         <Row nogutter>
           <Col xs={12} md={12}>
             <Title>
-              ¿Dudas? ¿Consultas? Estamos aquí para ayudarlo
+              Escríbenos y te contactaremos a la brevedad
             </Title>
             <Form onSubmit={onSubmit}>
               <Row>
@@ -166,7 +169,7 @@ export default ()=> {
                     </Col>                
                     <Col xs={12}>
                       <SubTitleFooter>
-                        También puede escribirnos a <MailSpan>ventas@leasy.cl</MailSpan>
+                        También puede escribirnos a <MailSpan>lav@lavpropiedades.com</MailSpan>
                       </SubTitleFooter>                                                              
                     </Col>                                                               
                   </Row>

@@ -7,7 +7,7 @@ import { LoadingOutlined } from '@ant-design/icons';
 const MainCont = styled.div`
   //background-color: ${props => props.theme.main.primaryColor};
   color: #fff;
-  padding: 2rem 0;
+  padding: .5rem 0;
   font-size: 12px;
   user-select: none;
 `
@@ -19,7 +19,7 @@ const RatesCont = styled.ul`
   color: #fff;
   @media(min-width: 768px){
     font-weight: normal;
-    justify-content: flex-start;
+    justify-content: flex-end;
     color: #fff;
   }
 `
@@ -71,7 +71,7 @@ export default ()=> {
 
   return(
     <MainCont>
-      <Container>
+
         <RatesCont>
           <RateItem>
             UF {data.uf}
@@ -83,7 +83,7 @@ export default ()=> {
             Dólar {data.dollar}
           </RateItemNoAfter>                    
         </RatesCont>
-      </Container>
+
     </MainCont>
   )
 }

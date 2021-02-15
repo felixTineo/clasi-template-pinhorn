@@ -21,7 +21,7 @@ const MainCont = styled.div`
   align-items: flex-start;
   position: relative;
   @media(min-width: 768px){
-    min-height: calc(100vh - 81px);    
+    //min-height: calc(100vh - 81px);    
   }
 `
 
@@ -48,17 +48,23 @@ const SvgCont = styled.svg`
     stroke: ${props => props.theme.main.primaryColor};
   }
 `
+const MoreButtonCont = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+`
 const MoreButton = styled.button`
   margin: 2rem 0;
   border: none;
   background: transparent;
-  color: ${props => props.theme.main.primaryColor};
+  color: rgba(255, 255, 255, .8);
   transition: 250ms ease;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: bold;
   &:hover{
-    filter: saturate(5.5);
+    color: rgba(255, 255, 255, 1);
   }
 `
 
@@ -71,8 +77,27 @@ export default ()=> {
         <Container>
         <MainCont>
           <Title>
-            {state.home.hero.title}
+            Vende, compra o arrienda tu propiedad con nosotros
           </Title>
+          <MoreButtonCont>
+            <MoreButton onClick={()=> setFilter(!filter)}>
+            {
+              filter
+              ?(
+                <Fragment>
+                  Menos filtros
+                  <UpOutlined style={{ marginLeft: 8 }} />        
+                </Fragment>
+              )
+              :(
+                <Fragment>
+                  Más filtros
+                  <DownOutlined style={{ marginLeft: 8 }} />              
+                </Fragment>              
+              )
+            }
+          </MoreButton>     
+        </MoreButtonCont>     
           <FormProperty shadow filter={filter} />
           <DownButton href="#properties">
   {/*          <SvgCont width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,23 +109,7 @@ export default ()=> {
         </Container>      
       </VeryMainCont>
       <Container>
-        <MoreButton onClick={()=> setFilter(!filter)}>
-          {
-            filter
-            ?(
-              <Fragment>
-                Menos filtros
-                <UpOutlined style={{ marginLeft: 8 }} />        
-              </Fragment>
-            )
-            :(
-              <Fragment>
-                Más filtros
-                <DownOutlined style={{ marginLeft: 8 }} />              
-              </Fragment>              
-            )
-          }
-        </MoreButton>
+
       </Container>
     </Fragment>
   )

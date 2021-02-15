@@ -27,18 +27,18 @@ export default ({ block, shadow, onChange, onSubmit, values })=> {
       <Row gutterWidth={32} align="center">
         <Col xs={12} md={2}>
           <Input
-            placeholder="Precio desde"
-            id="priceMin"
+            placeholder="Superficie desde"
+            id="totalAreaFrom"
             onChange={onChange}
-            value={values.priceMin}
+            value={values.totalAreaFrom}
           />
         </Col>
         <Col xs={12} md={2}>
           <Input
-            placeholder="Precio hasta"
-            id="priceMax"
+            placeholder="Superficie hasta"
+            id="totalAreaTo"
             onChange={onChange}
-            value={values.priceMax}
+            value={values.totalAreaTo}
           />
         </Col>
         <Col xs={12} md={2}>

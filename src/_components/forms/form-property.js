@@ -35,6 +35,8 @@ export default ({ block, shadow, filter })=> {
     stringSearch: '',
     priceMin: '',
     priceMax: '',
+    totalAreaFrom: '',
+    totalAreaTo: '',    
     bedrooms: '',
     bathrooms: '',
     currency: 'CLP',

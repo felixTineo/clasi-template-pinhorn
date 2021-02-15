@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-grid-system';
 import Context from '../../_context';
 
 const MainCont = styled.section`
-    background-image: linear-gradient( 0deg, rgba(0, 0, 0, .5) 40%, transparent),  url(${props => props.theme.about.hero.background});
+    background-image: linear-gradient( 0deg, rgba(0, 0, 0, .4) 40%, transparent),  url(${props => props.theme.about.hero.background});
     background-size: cover;
     background-repeat: no-repeat;
 `

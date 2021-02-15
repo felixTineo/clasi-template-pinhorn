@@ -40,6 +40,8 @@ const ImageContainer = styled.div`
 `
 const Image = styled.img`
   width: 100%;
+  object-fit: cover;
+  object-position: center;
   //position: relative;
   //bottom: -5px;
   top: 0;
@@ -65,7 +67,7 @@ export default ()=> {
             </HistoryCont>
           </Col>
           <Col xs={12} md={7}>
-            <Image src={state.description.background} alt="historia" />
+            <Image src={"/about-history.jpg"} alt="historia" />
           </Col>                    
         </Row>
       </Container>

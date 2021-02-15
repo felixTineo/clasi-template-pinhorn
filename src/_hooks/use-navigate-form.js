@@ -11,9 +11,9 @@ export default (inputs)=> {
     setParams({ [e.target.id]: e.target.value });
   }
   const onFinish = useCallback(()=> {
-    const url = urlBuilder(`/properties`, { builderId,...params});
+    const url = urlBuilder(`/properties`, {...params});
     navigate(url);
-  },[params, builderId]);
+  },[params]);
 
   return { values: params, onChange, onFinish, setInitial: setParams }
 }

@@ -41,7 +41,7 @@ module.exports = {
         short_name: "lavpropiedades",
         lang: `es`,
         start_url: "/",
-        icon: `static/favicon.ico`,
+        //icon: `static/favicon.png`,
       },
     },    
     {
