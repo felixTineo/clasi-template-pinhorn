@@ -1,5 +1,5 @@
-import { v1 as uuid } from 'uuid';
-export default {
+const uuid = require('uuid').v1;
+module.exports = {
   edit:{
     visible: false,
     type: "",
@@ -12,35 +12,31 @@ export default {
     email: "clasi@clasihome.cl",
     address: "Aquí el texto de tu empres",
     phone: "56 2 1234 1234",
-    mobile: "56 2 1234 1234",      
+    mobile: "56 2 1234 1234",
     typeId: 'office',
-    lat: '-33.410167',
-    lng:'-70.655265',      
+    lat: '-70.655265',
+    lng: '-33.410167'
   },
   main:{
-    primaryColor: "#FFB630",
+    primaryColor: "#E50B4C",
     secondaryColor: "#ffffff",
     favicon: "",
     logo:{
       isImage: true,
       value: "/logo.svg",
     },
-    logoDark:{
-      isImage: true,
-      value: "/logo-dark.svg",
-    },
   },
   home:{
     hero:{
       visible: true,
-      title: "Tenemos propiedades exclusivas pensadas para ti.",
+      title: "Tenemos propiedades esclusivas pensadas para ti.",
       background: "/hero.jpg",
     },
     properties:{
       visible: true,
       title: "Contamos con una selección exclusiva de propiedades.",
       footer: "Estas son solo algunas de las propiedades que tenemos para ofrecerte",
-      bannerImage: "",
+      bannerImage: "/banner.jpg",
       buttonText: "Ver más",
       items:[
         {
@@ -584,7 +580,7 @@ export default {
     value: "75.000",
     ubication:{
       region: "Rosario",
-      commune: "Casorra alzamona",
+      commune: "Casorra Alzamona",
       location:{
         coordinates: ["0", "0"],
       }

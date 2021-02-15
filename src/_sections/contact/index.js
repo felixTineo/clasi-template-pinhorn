@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useReducer } from 'react';
 import Context from '../../_context'
 import styled from 'styled-components';
 import { Container, Row, Col } from 'react-grid-system';
 import { Input, Textarea } from '../../_components/inputs';
 import { Button } from '../../_components/buttons';
 import Map from '../../_components/map';
+import { LoadingOutlined } from '@ant-design/icons';
 
 const MainCont = styled.div`
   min-height: 80vh;
@@ -66,9 +67,62 @@ const ButtonContainer = styled.div`
     justify-content: flex-end;
   }   
 `
+const LoadingCont = styled.div`
+  background-color: rgba(255, 255, 255, .5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: ${props => props.theme.main.primaryColor};
+  font-size: 2rem;
+`
 
 export default ()=> {
   const { lat, lng } = useContext(Context).office;
+  const [loading, setLoading] = useState(false);
+  const [values, setValues] = useReducer((current, next) => ({ ...current, ...next }), {
+    name: "",
+    email: "",
+    mobile: "",
+    message: "",
+  });
+
+  const handleChange = e => {
+    setValues({ [e.target.id]: e.target.value });
+  }
+
+  const onSubmit = async(e)=> {
+    e.preventDefault();
+    setLoading(true);
+    try{
+      const options = {
+        headers: { "Content-type" : "application/json" },
+        method: "POST",
+        body: JSON.stringify(values),
+        mode: "cors",
+      }
+
+      const data = await fetch("/sendmail.php", options);
+      const result = await data.text();
+      console.log("MAIL API RESULT", result);
+      setLoading(false);
+      setValues({
+        name: '',
+        mobile: '',
+        email: '',
+        message: '',          
+      })              
+    }catch(e){
+      setLoading(false);
+      console.log("error", e);
+    }
+  }
+
   return(
       <MainCont>
             <Container>
@@ -77,8 +131,15 @@ export default ()=> {
             <Title>
               ¿Dudas? ¿Consultas? Estamos aquí para ayudarlo
             </Title>
-            <Form onSubmit={e=> e.preventDefault()}>
+            <Form onSubmit={onSubmit}>
               <Row>
+              {
+                loading && (
+                  <LoadingCont>
+                    <LoadingOutlined spin />
+                  </LoadingCont>
+                )
+              }                 
                 <Col xs={12} md={6}>
                   <Row>
                     <Col xs={12}>
@@ -88,15 +149,19 @@ export default ()=> {
                         //gray
                         vertical  
                         shadow
+                        onChange={handleChange}
+                        value={values.name}                        
                       />
                     </Col>
                     <Col xs={12}>
                       <Input
                         placeholder="Teléfono"
-                        id="phone"
+                        id="mobile"
                         //gray
                         vertical  
                         shadow
+                        onChange={handleChange}
+                        value={values.mobile}                        
                       />                                    
                     </Col>                
                     <Col xs={12}>
@@ -115,6 +180,8 @@ export default ()=> {
                         //gray
                         vertical  
                         shadow
+                        onChange={handleChange}
+                        value={values.email}                                      
                       />                                            
                     </Col>                    
                     <Col xs={12}>
@@ -125,6 +192,8 @@ export default ()=> {
                         rows={7}
                         vertical  
                         shadow
+                        onChange={handleChange}
+                        value={values.message}                                      
                       />                  
                     </Col>
                     <Col xs={12}>
@@ -144,7 +213,7 @@ export default ()=> {
               lat={parseFloat(lat)}
               lng={parseFloat(lng)}
               height={300}
-              zoom={3}
+              zoom={18}
             />         
             )
           } 

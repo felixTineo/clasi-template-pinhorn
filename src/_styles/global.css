@@ -33,9 +33,12 @@ button{
   font-size: 1rem;
 }
 
-button, input{
+button, input, select, option, textarea{
   outline: none;
   font-family: 'Lato', sans-serif;
+}
+input, select, option, textarea{
+  padding-left: .8rem !important;
 }
 
 input, select{

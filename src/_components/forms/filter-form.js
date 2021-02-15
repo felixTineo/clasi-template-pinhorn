@@ -20,36 +20,55 @@ const Form = styled.form`
   }  
 `
 
-export default ({ block, shadow })=> {
+export default ({ block, shadow, onChange, onSubmit, values })=> {
 
   return(
-    <Form onSubmit={(e) => e.preventDefault()} block={block} shadow={shadow}>
+    <Form onSubmit={onSubmit} block={block} shadow={shadow}>
       <Row gutterWidth={32} align="center">
         <Col xs={12} md={2}>
-          <Input placeholder="Desde" />
+          <Input
+            placeholder="Precio desde"
+            id="priceMin"
+            onChange={onChange}
+            value={values.priceMin}
+          />
         </Col>
         <Col xs={12} md={2}>
-          <Input placeholder="Hasta" />
+          <Input
+            placeholder="Precio hasta"
+            id="priceMax"
+            onChange={onChange}
+            value={values.priceMax}
+          />
         </Col>
         <Col xs={12} md={2}>
-          <Select
-            default="Dormitorios"
-            options={["opcion 1", "opcion 2", "opcion 3"]}
-            primary
+          <Input
+            placeholder="Habitaciones"
+            min={0}
+            id="bedrooms"
+            type="number"
+            onChange={onChange}
+            value={values.bedrooms}
+          />
+        </Col>    
+        <Col xs={12} md={2}>
+          <Input
+            placeholder="Baños"
+            min={0}
+            id="bathrooms"
+            type="number"
+            onChange={onChange}
+            value={values.bathrooms}
           />
         </Col>    
         <Col xs={12} md={2}>
           <Select
-            default="Baños"
-            options={["opcion 1", "opcion 2", "opcion 3"]}
+            id="currency"
+            default="Moneda"
+            options={["CLP", "UF"]}
             primary
-          />
-        </Col>    
-        <Col xs={12} md={2}>
-          <Select
-            default="Divisas"
-            options={["opcion 1", "opcion 2", "opcion 3"]}
-            primary
+            onChange={onChange}
+            value={values.currency}
           />
         </Col>                
         <Col xs={12} md={2}>

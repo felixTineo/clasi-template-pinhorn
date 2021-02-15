@@ -37,7 +37,7 @@ export default ({ block, shadow, filter })=> {
     priceMax: '',
     bedrooms: '',
     bathrooms: '',
-    currency: '',
+    currency: 'CLP',
   });
   const params = getSearchParams();
   
@@ -55,7 +55,7 @@ export default ({ block, shadow, filter })=> {
         priceMax: '',
         bedrooms: '',
         bathrooms: '',
-        currency: '',
+        currency: 'CLP',
       })
     }
   },[params, byCode]);  
@@ -136,7 +136,13 @@ export default ({ block, shadow, filter })=> {
       </Row>
     </Form>
     {
-      filter && <FilterForm />
+      filter && (
+        <FilterForm
+          onChange={onChange}
+          onSubmit={(e) => { e.preventDefault(); onFinish(); }}
+          values={values}
+        />
+      )
     }
     </Fragment>
   )
