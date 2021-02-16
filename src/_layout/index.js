@@ -28,7 +28,7 @@ export default ({ children, dark, data })=> {
           <Helmet>
             <meta charSet="utf-8" />
             <meta name="description" content="Vende, compra o arrienda tu propiedad con nosotros." />
-            <title>Lucia Arratia Valdebenito | Propiedades</title>
+            <title>Lav | Propiedades</title>
             <link rel="canonical" href="https://www.lavpropiedades.com" />
             <meta name="og:url" content="https://www.lavpropiedades.com" />
             <meta name="og:title" content="Lucia Arratia Valdebenito | Propiedades" />
