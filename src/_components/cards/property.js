@@ -105,7 +105,7 @@ export default ({
       <CardImage src={mainImage} />
       <CardInfo>
         <CardTitleCont>
-          <CardTitle>{truncate(title, 30)}</CardTitle>
+          <CardTitle>{truncate(title, 50)}</CardTitle>
           <CardPrice>{`${currency} ${FormatCurrency(currency, value)}`}</CardPrice>
           <li style={{ margin: "1rem 0" }}>
             <CardOperation>{operation.toLowerCase()} - </CardOperation>
