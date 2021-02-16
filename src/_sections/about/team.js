@@ -75,7 +75,7 @@ export default ()=> {
           <Col xs={12} md={6}>
             <Card>
               <div>
-              <Avatar src="/team-2.png" alt="Lucía Arratia Valdebenito" />
+              <Avatar src="/team-1.jpg" alt="Lucía Arratia Valdebenito" />
               </div>
               <div>
               <Name>Lucía Arratia Valdebenito</Name>
@@ -103,7 +103,7 @@ export default ()=> {
           <Col xs={12} md={6}>
             <Card>
               <div>
-              <Avatar src="/team-1.png" alt="Mauricio Ramos Baltra" />
+              <Avatar src="/team-2.jpg" alt="Mauricio Ramos Baltra" />
               </div>
               <div>
               <Name>Mauricio Ramos Baltra</Name>
