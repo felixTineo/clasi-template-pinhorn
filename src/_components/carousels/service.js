@@ -27,31 +27,6 @@ const ServiceDescription = styled.p`
 const ServiceContainer = styled.div`
   display: flex;
 `
-const DotsCont = styled.div`
-  position: absolute;
-  left: 2.5rem;
-  bottom: .4rem;
-`
-
-const SvgCont = styled.svg`
-  fill: ${props => props.theme.main.primaryColor};
-`
-const StyledDot = styled(Dot)`
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  border: none;
-  transition: 250ms ease;
-  background-color: #e4e4e4;
-  &:nth-child(2n - 1){
-    margin: 0 1rem;
-  }
-  &:disabled{
-    background-color: ${props => props.theme.main.primaryColor};
-    height: 14px;
-    width: 14px;
-  }
-`
 
 const Service = ({ id, title, description }) => {
   return(

@@ -186,6 +186,11 @@ export default ()=> {
                       Propiedades
                     </NavLink>                  
                   </Col>
+                  <Col xs={6} md={6}>
+                    <NavLink to={`/services`}>
+                      Servicios
+                    </NavLink>                  
+                  </Col>                  
 {/*                  <Visible md xs xxl lg xl>
                     <Col xs={6} md={6}>
                       <NavLink to="/news">

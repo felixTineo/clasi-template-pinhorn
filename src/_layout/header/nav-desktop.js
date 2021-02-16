@@ -100,6 +100,13 @@ export default ({ dark })=> {
             </NavLink>
           </Link>
         </NavItem>
+        <NavItem>
+          <Link to={`/services`}>
+            <NavLink dark={dark}>
+              Servicios
+            </NavLink>
+          </Link>
+        </NavItem>        
 {/*        <NavItem>
           <Link to="/news">
             <NavLink dark={dark}>

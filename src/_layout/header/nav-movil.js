@@ -119,6 +119,13 @@ export default ()=> {
               </NavLink>
             </Link>
           </NavItem>
+          <NavItem>
+            <Link to={`/services`}>
+              <NavLink>
+                Servicios
+              </NavLink>
+            </Link>
+          </NavItem>          
 {/*          <NavItem>
             <Link to="/news">
               <NavLink>
