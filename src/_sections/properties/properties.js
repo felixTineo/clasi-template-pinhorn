@@ -128,12 +128,12 @@ export default ({ location })=> {
             ))
           }
           {
-            data.totalRegistersQuery > 6
+            data.totalRegistersQuery > 9
             && (
               <Col xs={12}>
                 <NavPaginate>
                   <ReactPaginate
-                    pageCount={data.totalRegistersQuery / 6}
+                    pageCount={data.totalRegistersQuery / 9}
                     marginPagesDisplayed={2}
                     pageRangeDisplayed={4}
                     containerClassName="paginateCont"

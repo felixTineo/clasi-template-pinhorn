@@ -43,22 +43,18 @@ export default ({ block, shadow, onChange, onSubmit, values })=> {
         </Col>
         <Col xs={12} md={2}>
           <Input
-            placeholder="Habitaciones"
-            min={0}
-            id="bedrooms"
-            type="number"
+            placeholder="Precio desde"
+            id="priceMin"
             onChange={onChange}
-            value={values.bedrooms}
+            value={values.priceMin}
           />
         </Col>    
         <Col xs={12} md={2}>
           <Input
-            placeholder="Baños"
-            min={0}
-            id="bathrooms"
-            type="number"
+            placeholder="Precio hasta"
+            id="priceMax"
             onChange={onChange}
-            value={values.bathrooms}
+            value={values.priceMax}
           />
         </Col>    
         <Col xs={12} md={2}>

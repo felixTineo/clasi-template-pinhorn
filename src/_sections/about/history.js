@@ -56,6 +56,7 @@ export default ()=> {
   const state = useContext(Context).about;
   return(
     <MainCont>
+      {console.log("ABOURT", state)}
       <Container>
         <Row>
           <Col xs={12} md={5}>
@@ -67,7 +68,7 @@ export default ()=> {
             </HistoryCont>
           </Col>
           <Col xs={12} md={7}>
-            <Image src={"/about-history.jpg"} alt="historia" />
+            <Image src={state.history.background} alt="historia" />
           </Col>                    
         </Row>
       </Container>
