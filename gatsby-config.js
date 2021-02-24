@@ -10,12 +10,11 @@ require('dotenv').config({
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Lucia Arratia Valdebenito | Propiedades",
+    title: "Nilo Zucco - Negocios Inmobiliarios",
     author: "Clasihome",
     //imageUrl: "https://clasihome.com/properties/back.png",
-    description:
-      "Vende, compra o arrienda tu propiedad con nosotros.",
-    keywords: `inmobilario, chile, republica, propiedades, republicar, portales, portal, inmobiliaria, web, santiago, corredor, casas, departamentos, venta, arriendo, mejores, precios`,
+    description:"Nilo Zucco Negocios Inmobiliarios, Venta y Arriendo de propiedades en Las Condes, Venta y Arriendo de departamentos y casas en la Region Metropolitana",
+    keywords: `nilo zucco, nilo zucco propiedades, nilo zucco propiedades las condes, departamentos las condes, propiedades las condes, arriendos las condes, casas las condes`,
     facebook: "https://www.facebook.com/LAV-Propiedades-112024710667025/",
     instagram: "https://instagram.com/lavpropiedades?r=nametag",
     siteUrl: "https://www.lavpropiedades.com/",
