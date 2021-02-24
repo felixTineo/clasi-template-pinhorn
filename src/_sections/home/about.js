@@ -104,7 +104,7 @@ export default ()=> {
         <Container>
           <Row>
             <Col xs={12} md={6} push={{ md: 6 }}>
-                <HeroImage src={state.about.banner.image} />
+                <HeroImage src="/about-history.jpg" />
             </Col>                        
             <Col xs={12} md={6} pull={{ md: 6 }}>
               <DescriptionCont>
@@ -126,7 +126,7 @@ export default ()=> {
         <ServiceCont>
           <Row>
             <Col xs={12}>
-              <TitleService>Conozca los servicios de LAV Propiedades</TitleService>
+              <TitleService>Conozca nuestros servicios</TitleService>
             </Col>
             <Col xs={12}>
               <CarouselCont>

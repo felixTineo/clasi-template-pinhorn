@@ -4,21 +4,23 @@ import { Container, Row, Col } from 'react-grid-system';
 import Context from '../../_context';
 
 const MainCont = styled.section`
-    background-image: linear-gradient( 0deg, rgba(0, 0, 0, .4) 40%, transparent),  url(${props => props.theme.about.hero.background});
+    background-image: linear-gradient( to right, rgba(0, 0, 0, .5),rgba(0, 0, 0, .5)),  url(${props => props.theme.about.hero.background});
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 `
 const TitleCont = styled.div`
   position: relative;
-  height: 80vh;
+  min-height: 100vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding-top: 157.14px;
 `
 const Title = styled.h1`
   position: relative;
   color: #fff;
-  padding: 1rem;
+  //padding: 1rem;
   text-align: left;
   margin: 0;
   width: 100%;

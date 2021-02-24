@@ -4,13 +4,14 @@ import { Container, Row, Col } from 'react-grid-system';
 import Context from '../../_context';
 
 const MainCont = styled.section`
-    background-image: linear-gradient( 0deg, rgba(0, 0, 0, .4) 40%, transparent),  url("/602bbc5b11626.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),  url("/602bbc5b11626.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 `
 const TitleCont = styled.div`
   position: relative;
-  height: 80vh;
+  height: 100vh;
+  padding-top: 157px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -42,7 +43,7 @@ export default ()=> {
       <Container>
         <TitleCont>
           <Title>
-            {state.hero.title}
+            Manejamos una cartera selecta y reducida de propiedades para entregar un servicio de excelencia.
           </Title>
         </TitleCont>        
       </Container>

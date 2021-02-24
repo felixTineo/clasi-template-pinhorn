@@ -23,7 +23,7 @@ const Title = styled.p`
 `
 
 export default ({ noContact })=> {
-  const state = useContext(Context).about.ubication;
+  const state = useContext(Context);
   const { lat, lng } = useContext(Context).office;
   return(
     <Container>
@@ -31,7 +31,7 @@ export default ({ noContact })=> {
       <Row nogutter>
         <Col xs={12} md={6} >
           <Title>
-            Encuéntranos en Av. Presidente Riesco N° 5037 – Las Condes
+            Encuéntranos en {state.office.address}
           </Title>
         </Col>
         <Col xs={12} md={6}>

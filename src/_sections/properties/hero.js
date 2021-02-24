@@ -7,7 +7,7 @@ import RateBar from '../../_layout/header/rate-bar';
 import { DownOutlined, UpOutlined } from '@ant-design/icons';
 
 const VeryMainCont = styled.section`
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),url(${props => props.theme.home.hero.background});
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),url("/603667cdc2105.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -16,6 +16,7 @@ const VeryMainCont = styled.section`
 const MainCont = styled.div`
   display: flex;
   min-height: 100vh;
+  padding-top: 157px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -77,7 +78,7 @@ export default ()=> {
         <Container>
         <MainCont>
           <Title>
-            Vende, compra o arrienda tu propiedad con nosotros
+            {state.home.hero.title}
           </Title>
           <MoreButtonCont>
             <MoreButton onClick={()=> setFilter(!filter)}>
@@ -99,6 +100,7 @@ export default ()=> {
           </MoreButton>     
         </MoreButtonCont>     
           <FormProperty shadow filter={filter} />
+          <br />
           <DownButton href="#properties">
   {/*          <SvgCont width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="15" cy="15" r="14.5"/>

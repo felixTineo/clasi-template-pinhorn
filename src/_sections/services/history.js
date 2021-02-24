@@ -8,6 +8,21 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import { v1 as uuid } from 'uuid';
 import Map from '../../_components/map';
 
+const CHARS = [
+  {
+    title: "PÚBLICO EXIGENTE",
+    description: "Se dirigen a un público exigente y acotado, a menudo amigos, conocidos o personas que han escuchado de la corredora como consecuencia del boca a boca, o a través de las páginas web o redes sociales."
+  },
+  {
+    title: "POCAS PROPIEDADES",
+    description: "Trabajan con pocas propiedades a la vez para poder concentrarse en las demandas específicas de cada uno de los clientes.",
+  },
+  {
+    title: "TRATO PERSONALIZADO",
+    description: "Ofrecen un trato personalizado y servicio de asesoría hasta que se termina la operación. Se crea una relación cercana y de comunicación constante hasta el final.",
+  },
+]
+
 const MainCont = styled.section`
   padding: 6rem 0;
   padding-bottom: 0;
@@ -30,7 +45,7 @@ const HistoryCont = styled.div`
   }
 `
 const Title = styled.h2`
-  //color: ${props => props.theme.main.primaryColor};
+  color: ${props => props.theme.main.primaryColor};
   font-weight: 900;
   border-bottom: 4px solid ${props => props.theme.main.primaryColor};
   span{
@@ -76,11 +91,11 @@ const ButtonsContainer = styled.div`
   button{
     background: transparent;
     border: none;
-    color: hsl(88, 55%, 41%);
+    color: hsl(22, 81%, 57%);
     font-size: 1.7rem;
     transition: 250ms ease;
     &:hover{
-      color: hsl(88, 55%, 51%);
+      color: hsl(22, 81%, 67%);
     }
     &:disabled{
       color: gray;
@@ -109,7 +124,7 @@ const ServiceContainer = styled.div`
 `
 
 const TitleCont = styled.div`
-  margin-top: 6rem;
+  margin: 2rem 0;
   display: flex;
   flex-direction: column; 
   align-items: flex-start;
@@ -125,6 +140,16 @@ const UlService = styled.ul`
   list-style: initial;
   padding: 0 2rem;
   color: gray;
+  li{
+    color: ${props => props.theme.main.primaryColor};
+    margin-bottom: 1rem;
+    span{
+      color: gray;
+    }
+    strong{
+      color: #212121;
+    }
+  }
 `
 const TitleContMap = styled(TitleCont)`
   background-color: ${props => props.theme.main.primaryColor};
@@ -166,7 +191,7 @@ export default ()=> {
           <Col xs={12} md={6}>
             <HistoryCont>
               <Title>
-                NUESTROS <span>SERVICIOS</span>
+                Corredora <span>Boutique</span>
               </Title>
               <CarouselProviderCustom
                 naturalSlideWidth={100}
@@ -175,10 +200,12 @@ export default ()=> {
                 totalSlides={items.length}
                 visibleSlides={1}
                 orientation="horizontal"
+                isPlaying
+                infinite
               >
                 <Slider>
                   {
-                    items.map((item, index) => (
+                    CHARS.map((item, index) => (
                       <Slide key={item.id} index={index}>
                         <Service {...item} />
                       </Slide>
@@ -196,24 +223,60 @@ export default ()=> {
               </CarouselProviderCustom>              
             </HistoryCont>
           </Col>
-          <Col xs={12} md={6}>
+          <Col xs={12} md={12}>
             <TitleCont>
-              <Title2>VALOR AGREGADO</Title2>
-              <SubTitle>Además de los servicios que ofrecemos en forma directa, contamos con un equipo de profesionales asociados en distintas áreas:</SubTitle>
+              <Title2>VENTAS</Title2>
             </TitleCont>
             <UlService>
-              <li>Arquitectura</li>
-              <li>Ingenieros</li>
-              <li>Tasaciones</li>
-              <li>Proyectos</li>
-              <li>Abogados</li>
-              <li>Diseño</li>
-              <li>Construcción</li>
-              <li>Reparaciones</li>
-              <li>Instalaciones eléctricas</li>
+              <li><span>Valorización comercial de su propiedad.</span></li>
+              <li><span>Visitas guiadas y asistidas siempre.</span></li>
+              <li><span>Fotografías profesionales.</span></li>
+              <li><span>Asesoría Legal.</span></li>
+              <li><span>Estudio de títulos y redacción de escritura sin costo. por medio de nuestros abogados (Alianza LEGAL BROKER).</span></li>
+              <li><span>Convenio de publicación con los más importantes portales inmobiliarios.</span></li>
+              <li><span>Nuestra comisión solamente se paga una vez finalizada la operación.</span></li>
+              <li><span>Servicios complementarios por medio de nuestros asociados (remodelaciones, mudanzas,, repisas para bodegas, informe de tasación).</span></li>
+              <li><span>Alianza LATAM Pass.</span></li>
+              <li>
+                <strong>PROMOCIÓN DE REDES SOCIALES</strong><br />
+                <span>Publicamos su propiedad en nuestras plataformas de redes sociales, incluidas Instagram y Facebook, y también pagamos para promover las publicaciones para que lleguen no solo a nuestros seguidores sino a decenas de miles más.</span>
+              </li>
+              <li>
+                <strong>TOUR VIRTUAL 3D</strong><br />
+                <span>Trabajamos con MATTERPORT 3D para crear un recorrido virtual tridimensional de su propiedad, lo que permite a los posibles compradores de todo el mundo caminar virtualmente por su hogar. También creamos una vista de arriba hacia abajo para cada nivel de la casa, lo que permite a los usuarios una vista clara del diseño de la propiedad </span>
+              </li>
             </UlService>            
           </Col>
-          <Col xs={12} md={6}>
+          <Col xs={12} md={12}>
+            <TitleCont>
+              <Title2>ARRIENDOS</Title2>
+            </TitleCont>
+            <UlService>
+              <li><span>Valorización comercial de su propiedad.</span></li>
+              <li><span>Visitas guiadas y asistidas siempre.</span></li>
+              <li><span>Fotografías profesionales.</span></li>
+              <li><span>Asesoría Legal.</span></li>
+              <li><span>Estudio de títulos y redacción de escritura sin costo. por medio de nuestros abogados (Alianza LEGAL BROKER).</span></li>
+              <li><span>Convenio de publicación con los más importantes portales inmobiliarios.</span></li>
+              <li><span>Nuestra comisión solamente se paga una vez finalizada la operación.</span></li>
+              <li><span>Servicios complementarios por medio de nuestros asociados (remodelaciones, mudanzas,, repisas para bodegas, informe de tasación).</span></li>
+            </UlService>            
+          </Col>          
+          <Col xs={12} md={12}>
+            <TitleCont>
+              <Title2>ADMINISTRACIONES</Title2>
+            </TitleCont>
+            <UlService>
+              <li><span>Valorización comercial de su propiedad.</span></li>
+              <li><span>Visitas guiadas y asistidas siempre.</span></li>
+              <li><span>Fotografías profesionales.</span></li>
+              <li><span>Asesoría Legal.</span></li>
+              <li><span>Estudio de títulos y redacción de escritura sin costo. por medio de nuestros abogados (Alianza LEGAL BROKER).</span></li>
+              <li><span>Convenio de publicación con los más importantes portales inmobiliarios.</span></li>
+              <li><span>Nuestra comisión solamente se paga una vez finalizada la operación.</span></li>
+            </UlService>            
+          </Col>                    
+          <Col xs={12}>
             <TitleContMap>
               <TitleMap>Encuéntranos en Av. Presidente Riesco N° 5037 – Las Condes.</TitleMap>
             </TitleContMap>

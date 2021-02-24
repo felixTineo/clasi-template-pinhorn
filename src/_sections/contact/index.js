@@ -169,7 +169,7 @@ export default ()=> {
                     </Col>                
                     <Col xs={12}>
                       <SubTitleFooter>
-                        También puede escribirnos a <MailSpan>lav@lavpropiedades.com</MailSpan>
+                        También puede escribirnos a <MailSpan>info@nilozucco.cl</MailSpan>
                       </SubTitleFooter>                                                              
                     </Col>                                                               
                   </Row>

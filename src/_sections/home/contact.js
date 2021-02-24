@@ -11,6 +11,7 @@ const SectionCont = styled.div`
   padding: 2rem 0;
   //background-color: ${props => props.theme.main.primaryColor};
   //color: ${props => props.theme.main.primaryColor};
+  background-color: rgba(0, 0, 0, .05);
 `
 const TextCont = styled.div`
   
@@ -24,7 +25,7 @@ const SectionText = styled.p`
 
 const ButtonCont = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
 `

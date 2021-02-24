@@ -4,10 +4,10 @@ import Context from '../../_context';
 import { Container, Row, Col, Visible, Hidden } from 'react-grid-system';
 import { Button } from '../../_components/buttons';
 import styled from 'styled-components';
-import { FacebookFilled, InstagramFilled, LinkedinFilled } from '@ant-design/icons';
+import { FacebookFilled, InstagramFilled, LinkedinFilled, PhoneOutlined, WhatsAppOutlined, MailOutlined } from '@ant-design/icons';
 
 const Footer = styled.footer`
-  
+  background-color: rgba(0, 0, 0, .05);
 `
 const MainFooter = styled.div`
   padding: 4rem 0;
@@ -30,6 +30,15 @@ const OfficeInfoCont = styled.ul`
 const OfficeInfo = styled.li`
   color: #8E8787;
   margin-bottom: .5rem;
+`
+const OfficePhone = styled.a`
+  color: #8E8787;
+  &:visited{
+    color: #8E8787;
+  }
+  &:hover{
+    color: ${props => props.theme.main.primaryColor};
+  }
 `
 const FooterRights = styled.ul`
   padding: 0;
@@ -164,10 +173,22 @@ export default ()=> {
                       {office.address}
                     </OfficeInfo>
                     <OfficeInfo>
-                      {office.phone} / {office.mobile}
+                      <OfficePhone href="tel:+56233330207">
+                        <PhoneOutlined style={{ marginRight: 8 }} />
+                        {office.phone}
+                      </OfficePhone>
                     </OfficeInfo>
                     <OfficeInfo>
-                      {office.email}
+                      <OfficePhone href="https://api.whatsapp.com/send?phone=56954586436&text=Hola,%20estoy%20visitando%20el%20sitio%20Nilo%20Zucco%20y%20quisiera%20comunicarme%20con%20alguien.">
+                        <WhatsAppOutlined style={{ marginRight: 8 }} />
+                        {office.mobile}
+                      </OfficePhone>                      
+                    </OfficeInfo>
+                    <OfficeInfo>
+                      <OfficePhone href="mailto:info@nilozucco.cl">
+                        <MailOutlined style={{ marginRight: 8 }} />
+                        {office.email}
+                      </OfficePhone>
                     </OfficeInfo>
                   </OfficeInfoCont>                                
                 </Col>
