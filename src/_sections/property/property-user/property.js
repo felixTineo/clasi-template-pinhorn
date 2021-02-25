@@ -29,12 +29,13 @@ const CharItemLi = styled.li`
   color: #002438;
 `
 
-const CharItem = ({ icon, name }) => {
+const CharItem = ({ icon, name, value }) => {
   const Icon = Icons[icon];
   return(
     <CharItemLi>
       <Icon className="clasi-icon" />
       <span style={{ marginLeft: 16 }}>{name}</span>
+      <span style={{ marginLeft: 16 }}>{value}{name === "Superficie total" && " m²" || name === "Superficie útil" && " m²"}</span>
     </CharItemLi>
   )
 }
