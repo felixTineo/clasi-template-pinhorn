@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Row, Col, Visible } from 'react-grid-system';
 import InteractionButtons from '../interaction-buttons';
-import { truncate, FormatCurrency } from '../../../_util';
+import { truncate, priceFormat } from '../../../_util';
 import { EnvironmentOutlined } from '@ant-design/icons';
 
 const MainCont = styled.div`
@@ -53,7 +53,7 @@ export default ({ description })=> {
             {truncate(description.title, 70)}
           </Title>
           <Price>
-            {`${description.currency} ${FormatCurrency( description.currency, description.value)}`}
+            {`${description.currency} ${ description.currency === "UF" ? description.value : priceFormat(description.value)}`}
           </Price>
           <UbicationCont>
             <SvgCont>
