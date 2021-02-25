@@ -42,7 +42,7 @@ const CardInfo = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  //justify-content: space-between;
   color: #212121;
 `
 const CardTitleCont = styled.ul`
