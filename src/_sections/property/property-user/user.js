@@ -10,10 +10,14 @@ const MainCont = styled.div`
   padding: 4rem;
   background-color: ${props => props.theme.main.primaryColor};
   border: 1px solid #EBEBEB;
-  height: 100%;
+  //height: 100%;
   color: #fff;
   margin-top: 2rem;
   border-radius: 25px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  right: 0;
 `
 const UserCont = styled.div`
   margin-top: 2rem;

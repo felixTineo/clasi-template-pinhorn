@@ -48,7 +48,7 @@ export default ({ description })=> {
     <MainCont>
       <Row>
         <Hidden xs>
-         <InteractionButtons />
+         <InteractionButtons videos={description.videos} />
         </Hidden>
         <Col xs={12}>
           <PublicObs>

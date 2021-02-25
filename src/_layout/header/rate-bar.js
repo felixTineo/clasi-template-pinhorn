@@ -74,13 +74,13 @@ export default ()=> {
 
         <RatesCont>
           <RateItem>
-            UF {data.uf}
+            UF ${data.uf}
           </RateItem>
           <RateItem>
-            UTM {data.utm}
+            UTM ${data.utm}
           </RateItem>
           <RateItemNoAfter>
-            Dólar {data.dollar}
+            Dólar ${data.dollar}
           </RateItemNoAfter>                    
         </RatesCont>
 

@@ -51,9 +51,13 @@ const QuotationCont = styled.div`
   top: -2rem;
   left: 4rem;
 `
-
+const DotCont = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+`
 const StyledDot = styled(Dot)`
-  height: 2px;
+  height: 4px;
   width: 2rem;
   //border-radius: 50%;
   border: none;
@@ -63,7 +67,7 @@ const StyledDot = styled(Dot)`
     margin: 0 1rem;
   }
   &:disabled{
-    background-color: ${props => props.theme.main.primaryColor};
+    background-color: #8E8787;
   }
 `
 
@@ -160,9 +164,11 @@ export default ()=> {
               ))
             }
           </Slider>
+          <DotCont>
           {
               Array(items.length).fill(0).map((_,i) => <StyledDot /*style={{ backgroundColor: color }} className="carousel-text-dot"*/ key={i} slide={i} />)
-          }         
+          }        
+          </DotCont> 
         </CarouselProvider>
       </Visible>
     </Fragment>

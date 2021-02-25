@@ -3,7 +3,7 @@ import OfficeContext from '../../_context';
 import { ReviewCarousel } from '../../_components/carousels'
 import styled from 'styled-components';
 import { Container, Col, Row } from 'react-grid-system';
-import Contact from '../about/contact';
+import Contact from '../home/contact';
 
 const MainSection = styled.section`
   position: relative;
@@ -11,7 +11,6 @@ const MainSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 2rem; 
   @media(min-width: 768px){
     padding: 4rem 0; 
   }
@@ -26,10 +25,11 @@ const SvgCont = styled.svg`
 const QuoteCarouselCont = styled.div`
   padding-top: 0rem;
   border-radius: 25px;
-  width: 80%;
+  width: 100%;
   background-color: ${props => props.theme.main.primaryColor};
   @media(min-width: 768px){
     padding-top: 2rem;
+    width: 80%;
   }
 `
 const CarouselCont = styled.div`

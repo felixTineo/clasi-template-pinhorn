@@ -120,14 +120,15 @@ export default ({ dark })=> {
               Contacto
             </NavLink>
           </Link>
-        </NavItem>                          
+        </NavItem>         
+        <NavItem>
+          <Link href={`http://app.clasihome.com/login?logo=${state.main.logo.value}&primaryColor=${state.main.primaryColor.substring(1)}`} target="_blank" rel="noopener">
+            <NavLink dark={dark}>
+              Login
+            </NavLink>
+          </Link>
+        </NavItem>                                  
       </NavBar>
-      <div />
-      <LoginButton
-        href={`http://app.clasihome.com/login?logo=${state.main.logo.value}&primaryColor=${state.main.primaryColor.substring(1)}`}
-      >
-        Login
-      </LoginButton>
   </MainCont>
   </Fragment>
   )

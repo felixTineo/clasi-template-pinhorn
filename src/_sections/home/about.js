@@ -83,9 +83,10 @@ const QuoteCarouselCont = styled.div`
   //padding-top: 6rem;
   background-color:  ${props => props.theme.main.primaryColor};
   border-radius: 25px;
-  width: 80%;
+  width: 100%;
   @media(min-width: 768px){
     //padding-top: 2rem;
+    width: 80%;
   }
 `
 const CarouselCont = styled.div`

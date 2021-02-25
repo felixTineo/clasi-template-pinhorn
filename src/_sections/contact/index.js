@@ -13,7 +13,7 @@ const MainCont = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 4rem;
+  margin-top: 129px;
   background-color: ${props => props.theme.main.primaryColor};
   @media(min-width: 768px){
     margin-top: 140.86px;

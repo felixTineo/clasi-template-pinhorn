@@ -65,7 +65,7 @@ export default ({ description })=> {
           </UbicationCont>
         </Col>
         <Visible xs>
-          <InteractionButtons />
+          <InteractionButtons videos={description.videos} />
         </Visible>
       </Row>
     </MainCont>
