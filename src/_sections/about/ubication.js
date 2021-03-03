@@ -31,7 +31,7 @@ export default ({ noContact })=> {
       <Row nogutter>
         <Col xs={12} md={6} >
           <Title>
-            Encuéntranos en {state.office.address}
+            Nuestra dirección comercial:  {state.office.address}
           </Title>
         </Col>
         <Col xs={12} md={6}>

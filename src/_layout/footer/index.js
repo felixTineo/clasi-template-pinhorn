@@ -5,6 +5,7 @@ import { Container, Row, Col, Visible, Hidden } from 'react-grid-system';
 import { Button } from '../../_components/buttons';
 import styled from 'styled-components';
 import { FacebookFilled, InstagramFilled, LinkedinFilled, PhoneOutlined, WhatsAppOutlined, MailOutlined } from '@ant-design/icons';
+import RateBar from '../header/rate-bar';
 
 const Footer = styled.footer`
   background-color: rgba(0, 0, 0, .05);
@@ -265,7 +266,10 @@ export default ()=> {
                   </SocialNav>
                 </Col>  
               </Row>
-            </Col>                          
+            </Col>       
+            <Col xs={12}>
+              <RateBar/>
+            </Col>                               
           </Row>
         </Container>      
       </MainFooter>

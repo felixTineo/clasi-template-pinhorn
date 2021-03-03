@@ -31,7 +31,7 @@ export default ({ noContact })=> {
       <Row nogutter>
         <Col xs={12} md={6} >
           <Title>
-            Encuéntranos en Av. Presidente Riesco N° 5037 – Las Condes
+            Nuestra dirección comercial:   Apoquindo 6410, Of 605, Las Condes
           </Title>
         </Col>
         <Col xs={12} md={6}>

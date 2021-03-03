@@ -57,6 +57,10 @@ const ButtonLink = styled.a`
     color: ${props => props.theme.main.primaryColor};
   }
 `
+const LatamPass = styled.img`
+  width: 180;
+  height: 66px;
+`
 
 export default ()=> {
 
@@ -80,6 +84,7 @@ export default ()=> {
             <Description>
               En las mismas publicaciones sujetas a esta promoción el cliente verá cuantas millas le serán transferidas al finalizar la operación. 
             </Description>
+            <LatamPass src="/latampass-2.jpg" />
             </InfoCont>
           </Col>
           <Col xs={12} md={6}>

@@ -19,8 +19,8 @@ const RatesCont = styled.ul`
   color: #fff;
   @media(min-width: 768px){
     font-weight: normal;
-    justify-content: flex-end;
-    color: #fff;
+    //justify-content: flex-end;
+    color: #000;
   }
 `
 const RateItem = styled.li`

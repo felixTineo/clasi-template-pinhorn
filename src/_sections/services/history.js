@@ -154,6 +154,9 @@ const UlService = styled.ul`
 const TitleContMap = styled(TitleCont)`
   background-color: ${props => props.theme.main.primaryColor};
   padding: 1rem;
+  margin-bottom: 0;
+  justify-content: center;
+  align-items: center;
 `
 const TitleMap = styled.p`
   font-size: 1.2rem;
@@ -252,14 +255,14 @@ export default ()=> {
               <Title2>ARRIENDOS</Title2>
             </TitleCont>
             <UlService>
-              <li><span>Valorización comercial de su propiedad.</span></li>
+              <li><span>Asesoría en la definición del canon de arriendo</span></li>
               <li><span>Visitas guiadas y asistidas siempre.</span></li>
               <li><span>Fotografías profesionales.</span></li>
-              <li><span>Asesoría Legal.</span></li>
-              <li><span>Estudio de títulos y redacción de escritura sin costo. por medio de nuestros abogados (Alianza LEGAL BROKER).</span></li>
               <li><span>Convenio de publicación con los más importantes portales inmobiliarios.</span></li>
-              <li><span>Nuestra comisión solamente se paga una vez finalizada la operación.</span></li>
-              <li><span>Servicios complementarios por medio de nuestros asociados (remodelaciones, mudanzas,, repisas para bodegas, informe de tasación).</span></li>
+              <li><span>Estricto proceso de selección del arrendatario.</span></li>
+              <li><span>Asesoría Legal.</span></li>
+              <li><span>Redacción de contratos por medio de nuestros abogados (Alianza LEGAL BROKER).</span></li>
+              <li><span>Entrega de la propiedad.</span></li>
             </UlService>            
           </Col>          
           <Col xs={12} md={12}>
@@ -267,18 +270,18 @@ export default ()=> {
               <Title2>ADMINISTRACIONES</Title2>
             </TitleCont>
             <UlService>
-              <li><span>Valorización comercial de su propiedad.</span></li>
-              <li><span>Visitas guiadas y asistidas siempre.</span></li>
-              <li><span>Fotografías profesionales.</span></li>
-              <li><span>Asesoría Legal.</span></li>
-              <li><span>Estudio de títulos y redacción de escritura sin costo. por medio de nuestros abogados (Alianza LEGAL BROKER).</span></li>
-              <li><span>Convenio de publicación con los más importantes portales inmobiliarios.</span></li>
-              <li><span>Nuestra comisión solamente se paga una vez finalizada la operación.</span></li>
+              <li><span>Recaudación de arriendo y transferencia en cuenta corriente del arrendador.</span></li>
+              <li><span>Envío de liquidación de arriendo electrónica.</span></li>
+              <li><span>Gestión de reparaciones.</span></li>
+              <li><span>Reajuste del canon de arriendo.</span></li>
+              <li><span>Término de Arriendo.</span></li>
+              <li><span>Orientación Legal.</span></li>
+              <li><span>Publicación en el Boletín Comercial.</span></li>
             </UlService>            
           </Col>                    
           <Col xs={12}>
             <TitleContMap>
-              <TitleMap>Encuéntranos en Av. Presidente Riesco N° 5037 – Las Condes.</TitleMap>
+              <TitleMap>Nuestra dirección comercial:  {state.office.address}</TitleMap>
             </TitleContMap>
             {
               lat && (

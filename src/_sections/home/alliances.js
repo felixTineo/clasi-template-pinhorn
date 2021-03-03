@@ -15,11 +15,6 @@ const items = [
     alt: "legal-broker"
   },
   {
-    href:"http://www.tasagroup.cl/",
-    src: "/tasagroup.jpg",
-    alt: "tasagroup"
-  },
-  {
     href:"http://www.altodecoraciones.cl/",
     src: "/altodecoraciones.jpg",
     alt: "altodecoraciones"
@@ -36,12 +31,12 @@ const VeryMainCont = styled.section`
 const MainCont = styled.div`
   display: flex;
   position: relative;
-  left: -400px;
+  left: -500px;
   padding: 3rem 0;
 `
 
 const Box = styled.div`
-  width: 400px;
+  width: 500px;
   //height: 100px;
   background-color: transparent;
   //display: flex;
@@ -78,13 +73,13 @@ export default ()=> {
 
   useEffect(()=>{
     gsap.set(".box", {
-      x: (i) => i * 400,
+      x: (i) => i * 500,
     });
-    const mod = gsap.utils.wrap(0, 400 * 5);
+    const mod = gsap.utils.wrap(0, 500 * 4);
     const tween = gsap.to(".box",{
       paused: true,
       duration: 20,
-      x: "-=" + (400 * 5),
+      x: "-=" + (500 * 4),
       ease: "linear",
       //paused: true,
       repeat: -1,

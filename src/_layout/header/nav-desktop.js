@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Logo from './logo';
 import Link from '../../_components/link';
 import { Button } from '../../_components/buttons';
-import RateBar from './rate-bar';
+//import RateBar from './rate-bar';
 
 const MainCont = styled.nav`
   padding: 1rem 0;
@@ -82,7 +82,7 @@ export default ({ dark })=> {
   const builderId = useContext(Context).builderId;
   return(
     <Fragment>
-      <RateBar />
+      {/*<RateBar />*/}
     <MainCont>
       <Logo dark={dark} />
       <NavBar>
@@ -121,13 +121,13 @@ export default ({ dark })=> {
             </NavLink>
           </Link>
         </NavItem>         
-        <NavItem>
+{/*        <NavItem>
           <Link href={`http://app.clasihome.com/login?logo=${state.main.logo.value}&primaryColor=${state.main.primaryColor.substring(1)}`} target="_blank" rel="noopener">
             <NavLink dark={dark}>
               Login
             </NavLink>
           </Link>
-        </NavItem>                                  
+</NavItem>   */}                               
       </NavBar>
   </MainCont>
   </Fragment>

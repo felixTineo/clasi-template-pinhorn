@@ -40,7 +40,7 @@ export default ({ noMargin })=> {
               <Col xs={12} md={9}>
                 <ButtonCont>
                   <SectionText>
-                    {sectionText}
+                    ¿Necesitas vender, arrendar o comprar una propiedad? Asesórate por expertos. 
                   </SectionText>          
                 </ButtonCont>
               </Col>
