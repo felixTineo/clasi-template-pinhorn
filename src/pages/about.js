@@ -16,7 +16,7 @@ export default ({ data }) => {
     <Description />
     {/*<Stats />    */}
     {/*<Team />*/}
-    <Ubication />
+    {/*<Ubication />*/}
   </Layout>
   )
 }

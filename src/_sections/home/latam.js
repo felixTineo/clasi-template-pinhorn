@@ -84,7 +84,7 @@ export default ()=> {
             <Description>
               En las mismas publicaciones sujetas a esta promoción el cliente verá cuantas millas le serán transferidas al finalizar la operación. 
             </Description>
-            <LatamPass src="/latampass-2.jpg" />
+            <LatamPass src="/latam+nilo.png" />
             </InfoCont>
           </Col>
           <Col xs={12} md={6}>

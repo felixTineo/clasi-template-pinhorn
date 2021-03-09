@@ -170,9 +170,9 @@ export default ()=> {
                 </Col>
                 <Col xs={12}>
                   <OfficeInfoCont>
-                    <OfficeInfo>
+{/*                    <OfficeInfo>
                       {office.address}
-                    </OfficeInfo>
+</OfficeInfo>*/}
                     <OfficeInfo>
                       <OfficePhone href="tel:+56233330207">
                         <PhoneOutlined style={{ marginRight: 8 }} />

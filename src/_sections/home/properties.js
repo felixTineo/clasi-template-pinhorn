@@ -47,11 +47,11 @@ export default ({ noMargin })=> {
     <MainCont id="properties" noMargin={noMargin}>
       <Container>
         <Row>
-          <Col xs={12}>
+{/*          <Col xs={12}>
             <Title>
               {state.title}
             </Title>                 
-          </Col>
+  </Col>*/}
           <Col xs={12}>
             <PropertyCarousel items={items} />
           </Col>

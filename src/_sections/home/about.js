@@ -124,7 +124,7 @@ export default ()=> {
           </Row>
           </Container>
       </HeroInfoCont>
-        <ServiceCont>
+{/*        <ServiceCont>
           <Row>
             <Col xs={12}>
               <TitleService>Conozca nuestros servicios</TitleService>
@@ -135,7 +135,7 @@ export default ()=> {
               </CarouselCont>
             </Col>
           </Row>
-        </ServiceCont>
+</ServiceCont>*/}
         <Row>
           <Col xs={12} md={12}>
             <div style={{ display: "flex", justifyContent: "center" }}>

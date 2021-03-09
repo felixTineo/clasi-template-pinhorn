@@ -17,7 +17,14 @@ const MainCont = styled.div`
   margin: 8rem 0;
 `
 const Title = styled.h2`
-
+  color: ${props => props.theme.main.primaryColor};
+  font-weight: 900;
+  border-bottom: 4px solid ${props => props.theme.main.primaryColor};
+  display: inline-block;
+  span{
+    font-weight: lighter;
+    color: rgba(0, 0, 0, .5)
+  }
 `
 const Description = styled.p`
 
@@ -57,7 +64,7 @@ export default ()=> {
           </Col>
           <Col xs={12} md={6}>
             <Title>
-              Home Staging
+              Home <span>Staging</span>
             </Title>            
             <Description>
               Previo a la toma de fotografías profesionales y de la creación del tour vitual asesoramos a nuestros clientes en la puesta en escena de su propiedad. Esto para sacar el mejor partido a su inmueble por medio de la optimización visual. 

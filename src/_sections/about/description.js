@@ -21,7 +21,7 @@ const Image = styled.img`
 const Carousel = styled.div`
   background-color: #F7F7F7;
   min-height: 99%;
-  //padding-bottom: 2rem;
+  padding-bottom: 2rem;
   @media(min-width: 768px){
     //padding: 4rem;
     //padding-top: 20%;

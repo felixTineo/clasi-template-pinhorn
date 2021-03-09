@@ -16,7 +16,7 @@ const MainCont = styled.div`
   margin-top: 129px;
   background-color: ${props => props.theme.main.primaryColor};
   @media(min-width: 768px){
-    margin-top: 140.86px;
+    margin-top: 126.75px;
   }  
 `
 
@@ -209,7 +209,7 @@ export default ()=> {
               </Row>
             </Form >        
           </Col>
-          <Col xs={12} md={12}>
+{/*          <Col xs={12} md={12}>
           {
             lat && (
               <Map
@@ -220,7 +220,7 @@ export default ()=> {
             />         
             )
           } 
-          </Col>
+        </Col>*/}
         </Row>
         </Container>
       </MainCont>
